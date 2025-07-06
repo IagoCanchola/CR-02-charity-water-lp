@@ -4,139 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Charity Water Landing Page</title>
+    <!-- Link to your external CSS file -->
     <link rel="stylesheet" href="styles.css">
+    <!-- Google Fonts for Tinos, Gelasio, and Merriweather (if needed elsewhere) -->
     <link href="https://fonts.googleapis.com/css?family=Tinos:700,400|Gelasio:700,400&display=swap" rel="stylesheet">
-    <!-- Add this line to load Merriweather from Google Fonts -->
     <link href="https://fonts.googleapis.com/css?family=Merriweather:700,400&display=swap" rel="stylesheet">
-    <style>
-        /* Make all h2 headings twice as big and center them */
-        /* Beginner-friendly: This will affect every <h2> on your page */
-        h2 {
-          color: #1a1a1a;        /* Make all h2 text dark for good contrast */
-          font-size: 2.4em;      /* Double the default h2 size (usually 1.2em) */
-          text-align: center;    /* Center the heading */
-          font-family: 'Merriweather', serif; /* Use Merriweather font for all h2 */
-          margin-top: 0;
-          font-weight: 300;      /* Set font weight to 300 (light) */
-          background: none;      /* Remove any background */
-          box-shadow: none;      /* Remove any shadow */
-          border-radius: 0;      /* Remove rounded corners */
-          padding: 0;            /* Remove extra padding */
-        }
-
-        /* Make all h1 headings use Merriweather and font-weight 300 */
-        h1 {
-          font-family: 'Merriweather', serif; /* Use Merriweather font for all h1 */
-          font-weight: 300;                   /* Set font weight to 300 (light) */
-        }
-
-        /* Style the hero section headline and subheadline for beginners */
-        .hero h1 {
-          font-family: 'Merriweather', serif; /* Use Merriweather font for the hero headline */
-          font-size: 2.5em;                   /* Make the headline bigger */
-          font-weight: 300;                   /* Light font weight for the headline */
-          color: #fff;                        /* White text for contrast */
-          text-align: center;                 /* Center the headline */
-          margin-top: 0;                      /* Remove extra space above */
-          letter-spacing: 1px;                /* Add slight spacing between letters */
-          margin-bottom: 15px;                /* Add space below the headline */
-          text-shadow: 0 2px 8px rgba(0,0,0,0.15); /* Soft shadow for readability */
-        }
-
-        .hero p {
-          font-size: 1.2em;                   /* Slightly larger than normal text */
-          margin-top: 0;                      /* Remove extra space above */
-          font-family: 'Nunito Sans', Arial, sans-serif; /* Use Nunito Sans for hero paragraph */
-          color: #fff;                        /* White text for contrast */
-          text-align: center;                 /* Center the subheadline */
-          margin-top: 0;                      /* Remove extra space above */
-          text-shadow: 0 1px 4px rgba(0,0,0,0.12); /* Soft shadow for readability */
-        }
-
-        /* Make the headline in the hero section lighter */
-        .hero h1 {
-          font-size: 2.5em;
-          font-weight: 300; /* Light font weight for the headline */
-          letter-spacing: 1px;
-          margin-bottom: 15px;
-          text-shadow: 0 2px 8px rgba(0,0,0,0.15); /* Soft shadow for readability */
-        }
-
-        /* Style the subheadline in the hero section with Nunito Sans font */
-        .hero p {
-          font-size: 1.2em;
-          margin-top: 0;
-          font-family: 'Nunito Sans', Arial, sans-serif; /* Use Nunito Sans for hero paragraph */
-          text-shadow: 0 1px 4px rgba(0,0,0,0.12);
-        }
-
-        /* Style the story section for beginners */
-        .story {
-          text-align: center;    /* Center all text in the story section */
-          padding: 20px;        /* Add padding for spacing */
-        }
-
-        .story h2 {
-          font-size: 2.4em;      /* Make story section h2 big */
-          margin-bottom: 20px;   /* Space between h2 and paragraph */
-        }
-
-        .story p {
-          font-size: 1.2em;       /* Normal text size for paragraphs */
-          line-height: 1.6;       /* Increase line height for readability */
-          margin-bottom: 20px;    /* Space between paragraphs */
-        }
-
-        /* Style the impact story section */
-        .impact-story {
-          display: flex;         /* Use flexbox for layout */
-          flex-direction: column; /* Stack image and text vertically */
-          align-items: center;   /* Center align all items */
-          text-align: center;    /* Center all text */
-          padding: 20px;        /* Add padding for spacing */
-        }
-
-        .impact-image {
-          max-width: 100%;      /* Responsive image */
-          height: auto;         /* Maintain aspect ratio */
-          border-radius: 10px;  /* Rounded corners for the image */
-          margin-bottom: 20px;   /* Space between image and text */
-        }
-
-        /* Style the call-to-action section */
-        .call-to-action {
-          text-align: center;    /* Center all text */
-          padding: 20px;        /* Add padding for spacing */
-          background-color: #f9f9f9; /* Light background for contrast */
-          border-top: 1px solid #ddd; /* Top border for separation */
-        }
-
-        .call-to-action h2 {
-          font-size: 2.4em;      /* Big h2 for emphasis */
-          margin-bottom: 10px;   /* Space between h2 and paragraph */
-        }
-
-        .call-to-action p {
-          font-size: 1.2em;       /* Normal text size for paragraphs */
-          line-height: 1.6;       /* Increase line height for readability */
-          margin-bottom: 20px;    /* Space between paragraphs */
-        }
-
-        .donate-button {
-          display: inline-block;  /* Make the link behave like a button */
-          padding: 10px 20px;    /* Vertical and horizontal padding */
-          font-size: 1.2em;       /* Button text size */
-          color: #fff;            /* White text color */
-          background-color: #007bff; /* Bootstrap primary blue */
-          border-radius: 5px;     /* Rounded corners */
-          text-decoration: none;   /* Remove underline */
-          transition: background-color 0.3s; /* Smooth background color transition */
-        }
-
-        .donate-button:hover {
-          background-color: #0056b3; /* Darker blue on hover */
-        }
-    </style>
+    <!-- No <style> tag needed here, all styles are in styles.css -->
 </head>
 <body>
     <!-- Page Heading -->
@@ -158,27 +31,28 @@
     </section>
 
     <!-- Story Section: This tells the story of the nonprofit -->
-    <section class="story">
+<section class="story">
        <h2>Our Story</h2>
         <p>
-
-  
-            
+        <!-- You can add your story text here -->
+        </p>
+</section>
 
     <!-- Real-World Impact Story Section -->
-    <section class="impact-story">
-        <!-- Section headline -->
+    <!-- Parent container for the two sections -->
+    <div class="impact-row">
+      <!-- Image section on the left -->
+      <section class="impact-image-section">
+        <img src="https://images.ctfassets.net/2w85ks0ylymt/1lBDG2LzEunSFe0JEEQ4HS/760e5cb0e600b4b442e204024a82e822/Nepal_2022_CG-1880.jpg?w=1200" alt="Amina smiling with clean water" class="impact-image">
+      </section>
+      <!-- Text section on the right -->
+      <section class="impact-text-section">
         <h2>Real Impact: Meet Amina</h2>
-        <!-- Container for image and text -->
-        <div class="impact-content">
-            <!-- Impact image -->
-            <img src="https://images.unsplash.com/photo-1464983953574-0892a716854b?auto=format&fit=crop&w=600&q=80" alt="Amina smiling with clean water" class="impact-image">
-            <!-- Impact story text -->
-            <p>
-                Amina used to walk miles every day to collect water for her family. Thanks to your support, her village now has a clean water well. Amina can go to school and her family is healthier and happier.
-            </p>
-        </div>
-    </section>
+        <p>
+          Amina used to walk miles every day to collect water for her family. Thanks to your support, her village now has a clean water well. Amina can go to school and her family is healthier and happier.
+        </p>
+      </section>
+    </div>
 
     <!-- Call-to-Action Section: This encourages visitors to take action -->
     <section class="call-to-action">

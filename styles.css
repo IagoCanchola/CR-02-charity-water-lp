@@ -20,230 +20,283 @@ Fonts:
 
 /* 
   Charity: Water Landing Page Styles
-  This CSS uses the provided color palette and beginner-friendly styles.
+  This CSS uses a simple, beginner-friendly style.
 */
 
 /* Set up the main font and background color for the whole page */
 body {
-  background-color: #fff7e1; /* Set the page background to a light warm color */
+  background-color: #fff7e1; /* Light warm background */
   font-family: 'Avenir', 'Proxima Nova', Arial, sans-serif;
   margin: 0;
   padding: 0;
   color: #222;
 }
 
-/* Add a slight shadow and less rounded corners to each section for depth */
+/* Section styles */
 section {
-  background: #fff; /* Set section background back to white */
-  border-radius: 6px; /* Less rounded corners for a subtle look */
-  box-shadow: 0 2px 8px rgba(46, 157, 247, 0.07); /* Soft blue shadow */
-  margin: 24px 10px; /* Space between sections */
+  background: #fff;
+  border-radius: 6px;
+  margin: 24px 10px;
   padding: 24px 16px;
 }
 
 /* Hero Section Styles */
 .hero {
-  position: relative;        /* Needed for overlay */
-  background-color: #1A1A1A; /* Dark background for the hero section */
-  color: #fff;               /* White text for contrast */
-  text-align: center;        /* Center the text */
-  padding: 60px 0;           /* No left/right padding, only top/bottom */
-  border-radius: 0;          /* No rounded corners */
-  margin: 0;                 /* Remove margin so it touches the edges */
-  width: 100vw;              /* Make sure it covers the full width of the screen */
+  position: relative;
+  background-color: #1a1a1a;
+  color: #1a1a1a;
+  text-align: center;
+  padding: 60px 0;
+  border-radius: 0;
+  margin: 0;
+  width: 100vw;
   left: 50%;
   right: 50%;
   transform: translateX(-50%);
-  box-sizing: border-box;    /* Include padding in width calculation */
+  box-sizing: border-box;
 }
 
-/* Make the headline bold and modern */
 .hero h1 {
+  font-family: 'Merriweather', serif;
   font-size: 2.5em;
-  font-weight: bold;
+  font-weight: 300;
+  color: #ffc907;
+  text-align: center;
+  margin-top: 0;
   letter-spacing: 1px;
   margin-bottom: 15px;
-  text-shadow: 0 2px 8px rgba(0,0,0,0.15); /* Soft shadow for readability */
+  text-shadow: 0 2px 8px rgba(0,0,0,0.15);
 }
 
-/* Style the subheadline */
-.hero p {
-  font-size: 1.2em;
+.hero p,
+.hero-subheadline {
+  font-size: 1.4em;
   margin-top: 0;
+  font-family: 'Nunito Sans', Arial, sans-serif;
+  color: #ffffff;
+  text-align: center;
   text-shadow: 0 1px 4px rgba(0,0,0,0.12);
 }
 
-/* Story Section Styles */
-.story {
-  background-color: transparent; /* Remove the colored bubble */
-  color: #222;
-  text-align: center;
-  padding: 0; /* Remove extra padding */
+/* Add spacing above and below the "Our Story" heading */
+.our-story-spacing {
+  margin-top: 70px;
+  margin-bottom: 30px;
 }
 
-/* Add accent color to section headings */
+/* Headings */
+h1 {
+  font-family: 'Merriweather', serif;
+  font-weight: 300;
+  font-size: 3.2em;        /* Increased font size for h1 */
+}
+
 h2 {
-  color: #2E9DF7; /* Primary blue */
-  margin-top: 0;
-  font-weight: bold;
-  background: none;      /* Remove any background */
-  box-shadow: none;      /* Remove any shadow */
-  border-radius: 0;      /* Remove rounded corners */
-  padding: 0;            /* Remove extra padding */
-}
-
-/* Beginner-friendly: 
-   This will double the font size and center only the "Our Story" heading.
-   We use a class for best beginner practice.
-*/
-.our-story-heading {
-  font-size: 2.4em;      /* Double the default h2 size (usually 1.2em) */
-  text-align: center;    /* Center the heading */
-}
-
-/* Call-to-Action Section Styles */
-.call-to-action {
-  background-color: #FFC907; /* Primary Yellow */
-  color: #222;
+  color: #1a1a1a;
+  font-size: 2.4em;
   text-align: center;
-  padding: 30px 20px;
+  font-family: 'Merriweather', serif;
+  margin-top: 0;
+  font-weight: 300;
+  background: none;
+  box-shadow: none;
+  border-radius: 0;
+  padding: 0;
 }
 
-/* Style the impact story image */
+/* Make all <p> text in sections much bigger for easy reading */
+section p {
+  font-size: 2em;
+  line-height: 1.5;
+}
+
+/* Story Section */
+.story {
+  background: transparent; /* Make the background transparent */
+  text-align: center;
+  padding: 10px;           /* Lower the padding for less space */
+  margin-bottom: 10px; 
+  font-size: x-large;    /* Lower the bottom spacing */
+}
+
+/* Impact Story Section */
+.impact-story {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 20px;
+}
+
+.impact-content {
+  width: 100%;
+}
+
+.impact-image {
+  width: 100%;         /* Image fills its container */
+  max-width: 700px;    /* Set a large maximum width */
+  height: auto;        /* Keep the image's aspect ratio */
+  border-radius: 0;    /* No rounded corners */
+  margin-bottom: 20px; /* Space below the image */
+}
+
+/* Beginner-friendly: Place two sections side by side */
+.impact-row {
+  display: flex;           /* Put children side by side */
+  max-width: 15000px;        /* Limit total width */
+  margin: 0 auto;          /* Center on the page */
+  gap: 28px;               /* Space between sections */
+}
+
+.impact-image-section {
+  flex: 1;                 /* Take up half the space */
+  display: flex;
+  align-items: center;     /* Center image vertically */
+  justify-content: center; /* Center image horizontally */
+  background: transparent; /* No background */
+}
+
 .impact-image {
   width: 100%;
-  max-width: 320px;
-  border-radius: 10px;
-  margin-bottom: 16px;
-  box-shadow: 0 2px 8px rgba(46, 157, 247, 0.10);
+  max-width: 400px;
+  height: auto;
+  border-radius: 0;
 }
 
-/* Donate Button Styles */
-.donate-button {
-  display: inline-block;
-  background-color: #4FCB53; /* Green */
-  color: #fff;
-  padding: 14px 32px;
-  text-decoration: none;
-  border-radius: 6px;
-  font-weight: bold;
-  font-size: 1.1em;
-  margin-top: 18px;
-  box-shadow: 0 2px 8px rgba(79, 203, 83, 0.10);
-  transition: background 0.3s, transform 0.2s;
-  border: none;
-  cursor: pointer;
+.impact-text-section {
+  flex: 1;                 /* Take up half the space */
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Center text vertically */
+  background: transparent;
 }
 
-/* Change button color when hovered */
-.donate-button:hover {
-  background-color: #159A48; /* Dark Green */
-  transform: translateY(-2px) scale(1.04); /* Slight lift */
+/* Call-to-Action Section */
+.call-to-action {
+  text-align: center;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-top: 1px solid #ddd;
 }
 
-/* Add some spacing between sections */
-section {
+.call-to-action h2 {
+  font-size: 2.4em;
+  margin-bottom: 10px;
+}
+
+.call-to-action p {
+  font-size: 2em;
+  line-height: 1.5;
   margin-bottom: 20px;
 }
 
+.donate-button {
+  display: inline-block;
+  padding: 10px 20px;
+  font-size: 1.2em;
+  color: #fff;
+  background-color: #2E9DF7;
+  border-radius: 5px;
+  text-decoration: none;
+  transition: background-color 0.3s;
+}
+
+.donate-button:hover {
+  background-color: #0056b3;
+}
+
+/* Responsive Design for Small Screens */
+@media (max-width: 600px) {
+  .hero {
+    padding: 32px 8px;
+    font-size: 1em;
+  }
+  .hero h1 {
+    font-size: 1.4em;
+  }
+  .hero p {
+    font-size: 1em;
+  }
+  .story,
+  .call-to-action {
+    padding: 14px 8px;
+  }
+  .impact-content {
+    display: block;
+    text-align: center;
+  }
+  .impact-image {
+    width: 90%;
+    max-width: 220px;
+  }
+}
+
+/* Responsive Design for Larger Screens */
+@media (min-width: 601px) {
+  .impact-row {
+    display: flex;           /* Put image and text side by side */
+    max-width: 900px;        /* Limit total width */
+    margin: 0 auto;          /* Center on the page */
+    gap: 28px;               /* Space between sections */
+  }
+
+  .impact-image-section {
+    flex: 1;                 /* Take up half the space */
+    display: flex;
+    align-items: center;     /* Center image vertically */
+    justify-content: center; /* Center image horizontally */
+    background: transparent;
+  }
+
+  .impact-image {
+    width: 100%;             /* Fill the whole half */
+    max-width: none;         /* Remove max-width limit */
+    height: auto;            /* Keep the image's aspect ratio */
+    border-radius: 0;        /* No rounded corners */
+    margin-bottom: 0;        /* No extra space below */
+    display: block;
+  }
+
+  .impact-text-section {
+    flex: 1;                 /* Take up half the space */
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Center text vertically */
+    background: transparent;
+  }
+}
+
 /* Page Heading Styles */
-/* This styles the heading bar at the top of the page */
 .page-heading {
-  background-color: #fff; /* White background for the header */
-  color: #222;            /* Dark text for contrast on white */
-  width: 100%;            /* Make it cover the whole page */
-  padding: 28px 0;        /* Add space above and below the text */
-  text-align: center;     /* Center the heading text */
-  margin-bottom: 0;       /* No space below */
-  position: relative;     /* For positioning the logo */
-  border-bottom: 1px solid #eee; /* Optional: subtle line under header */
+  background-color: #fff;
+  color: #222;
+  width: 100%;
+  padding: 28px 0;
+  text-align: center;
+  margin-bottom: 0;
+  position: relative;
+  border-bottom: 1px solid #eee;
 }
 
-/* Logo image style for the heading */
-/* This makes the logo image in the header smaller */
 .logo {
-  position: absolute;    /* Position the logo absolutely inside the header */
-  left: 20px;            /* Padding from the left side */
-  top: 50%;              /* Vertically center */
-  transform: translateY(-50%); /* Adjust for perfect vertical centering */
-  height: 24px;          /* Set the logo height to half the previous size */
+  position: absolute;
+  left: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+  height: 24px;
 }
 
-/* Make the heading text dark for white background */
 .page-heading h1 {
-  color: #222;           /* Dark text */
+  color: #222;
   font-family: 'Tinos', serif;
   font-size: 2.8em;
   margin: 0;
   font-weight: bold;
   letter-spacing: 2px;
-  display: inline-block; /* So it doesn't overlap with the logo */
-  padding-left: 60px;    /* Add space so text doesn't overlap logo */
+  display: inline-block;
+  padding-left: 60px;
 }
 
-/* 
-  Media Queries for Responsive Design
-  Media queries help make your website look good on different screen sizes,
-  like phones (small screens) and computers (large screens).
-*/
-
-/* This media query applies styles when the screen is 600px wide or less (like on most phones) */
-@media (max-width: 600px) {
-  /* Make hero section padding smaller on small screens */
-  .hero {
-    padding: 32px 8px;
-    font-size: 1em;
-  }
-
-  /* Make headline font size smaller so it fits on small screens */
-  .hero h1 {
-    font-size: 1.4em;
-  }
-
-  /* Make subheadline font size smaller */
-  .hero p {
-    font-size: 1em;
-  }
-
-  /* Make story and call-to-action sections have less padding */
-  .story,
-  .call-to-action,
-  .donation-section {
-    padding: 14px 8px;
-  }
-
-  /* Make impact story image smaller and stack above the text */
-  .impact-content {
-    display: block; /* Stack items vertically */
-    text-align: center;
-  }
-
-  .impact-image {
-    width: 90%;    /* Make image take up most of the width */
-    max-width: 220px;
-  }
-}
-
-/* This media query applies styles when the screen is wider than 600px (like on tablets and computers) */
-@media (min-width: 601px) {
-  /* Show image and text side by side in the impact story */
-  .impact-content {
-    display: flex;           /* Place items in a row */
-    align-items: center;     /* Vertically center items */
-    justify-content: center; /* Center the whole group */
-    gap: 28px;               /* Space between image and text */
-    text-align: left;
-    max-width: 800px;
-    margin: 0 auto;
-  }
-
-  .impact-image {
-    width: 300px;
-  }
-}
-
-/* This loads the Tinos font from Google Fonts */
+/* Import Google Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Tinos:wght@400;700&display=swap');
-
-/* This loads the Nunito Sans font from Google Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;700&display=swap');
