@@ -127,19 +127,19 @@ section p {
 }
 
 .impact-image {
-  width: 160%;      /* Make the image large, but not too big */
-  max-width: none;  /* Remove any maximum width limit */
-  height: auto;     /* Keep the image's aspect ratio */
-  border-radius: 0; /* No rounded corners */
+  width: 100%;         /* Image fills its container */
+  max-width: 400px;    /* Limit the maximum width */
+  height: auto;        /* Keep the image's aspect ratio */
+  border-radius: 0;    /* No rounded corners */
   margin-bottom: 20px; /* Space below the image */
-  margin-left: 0;      /* Make sure image can expand to the left */
+  margin-left: 0;      /* No extra left margin */
 }
 
 /* Beginner-friendly: Place two sections side by side */
 .impact-row {
   display: flex;           /* Put children side by side */
   max-width: 900px;        /* Limit total width for better readability */
-  margin: 0 auto;          /* Center on the page */
+  margin: auto;          /* Center on the page */
   gap: 28px;               /* Space between sections */
 }
 
@@ -181,11 +181,13 @@ section p {
 /* Call-to-Action Section */
 .call-to-action {
   text-align: center;
-  padding: 20px 0 48px 0;    /* Top, right, bottom, left padding */
+  padding: 20px 60px 48px 60px;    /* Top, right, bottom, left padding */
   background-color: #ffc907;
   border-top: 1px solid #ddd;
-  margin-left: 60px;         /* Add space on the left */
-  margin-right: 60px;        /* Add space on the right */
+  margin-left: 50px;            /* Remove extra left margin */
+  margin-right: 50px;           /* Remove extra right margin */
+  max-width: none;           /* Remove compact width */
+  border-radius: 10px;       /* Rounded corners for a friendly look */
 }
 
 .call-to-action h2 {
@@ -197,8 +199,8 @@ section p {
   font-size: 25px;
   line-height: 1.5;
   margin-bottom: 20px;
-  padding-left: 100px;   /* Add space on the left */
-  padding-right: 100px;  /* Add space on the right */
+  padding-left: 0;   /* Remove extra left padding */
+  padding-right: 0;  /* Remove extra right padding */
 }
 
 .donate-button {
